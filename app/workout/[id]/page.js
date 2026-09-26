@@ -37,7 +37,7 @@ export default async function WorkoutDetailPage({ params }) {
         </div>
 
         <div>
-          <div className="mb-3 flex flex-wrap gap-1.5">
+          {/* <div className="mb-3 flex flex-wrap gap-1.5">
             {workout.muscleGroups.map((tag) => (
               <span
                 key={tag}
@@ -46,13 +46,24 @@ export default async function WorkoutDetailPage({ params }) {
                 {tag}
               </span>
             ))}
-          </div>
+          </div> */}
           <h1 className="font-display text-3xl uppercase tracking-wide text-white md:text-4xl">
             {workout.name}
           </h1>
           <p className="mt-3 text-sm leading-relaxed text-muted">
             {workout.description}
           </p>
+
+          <div className="mt-3 flex flex-wrap gap-1.5">
+  {workout.muscleGroups.map((tag) => (
+    <span
+      key={tag}
+      className="rounded-full bg-accent px-2 py-0.5 text-[10px] font-bold  tracking-wide text-black"
+    >
+      { tag.charAt(0).toUpperCase() + tag.slice(1).toLowerCase()}
+    </span>
+  ))}
+</div>
 
           <div className="mt-6 rounded-lg border border-line bg-panel">
             {specs.map(([label, val]) => (

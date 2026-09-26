@@ -53,14 +53,22 @@ export default function WorkoutCard({ workout }) {
       <div className="flex flex-1 flex-col gap-2 p-4">
   {/* Muscle Groups */}
   <div className="flex flex-wrap gap-1.5">
-    {workout.muscleGroups.map((tag) => (
+    {/* {workout.muscleGroups.map((tag) => (
       <span
         key={tag}
         className="rounded-full bg-accent px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-black"
       >
         {tag}
       </span>
-    ))}
+    ))} */}
+    {workout.muscleGroups.map((tag) => (
+  <span
+    key={tag}
+    className="rounded-full bg-accent px-2 py-0.5 text-[10px] font-bold tracking-wide text-black"
+  >
+    {tag.charAt(0).toUpperCase() + tag.slice(1).toLowerCase()}
+  </span>
+))}
   </div>
 
   {/* Workout Name */}
