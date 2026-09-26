@@ -35,8 +35,8 @@ export default function Navbar() {
                 href={link.href}
                 className={`rounded-full px-3 py-1.5 transition-colors ${
                   active
-                    ? "bg-accent text-ink"
-                    : "text-muted hover:text-white"
+                    ? "bg-[#1A2312] text-accent"
+                    : "text-white hover:text-white"
                 }`}
               >
                 {link.label}
@@ -45,7 +45,7 @@ export default function Navbar() {
           })}
         </nav>
 
-        <div className="flex items-center gap-4 text-xs text-muted">
+        <div className="flex items-center gap-4 text-xs text-white">
           <Link href="/my-plan" className="flex items-center gap-1.5">
             Plan
             <span className="flex h-5 w-5 items-center justify-center rounded-full bg-accent text-[10px] font-bold text-ink">
