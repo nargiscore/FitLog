@@ -54,7 +54,7 @@ export default function Navbar() {
           </Link>
           <Link href="/my-plan" className="flex items-center gap-1.5">
             Saved
-            <span className="flex h-6 w-6 items-center justify-center rounded-full border border-line text-[10px] font-bold text-white">
+            <span className="flex h-5 w-5 items-center justify-center rounded-full border border-white text-[10px] font-bold text-white">
               {savedCount}
             </span>
           </Link>
