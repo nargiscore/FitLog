@@ -73,8 +73,8 @@ export default function MyPlanPage() {
               onClick={() => setTab(key)}
               className={`rounded-full px-4 py-1.5 transition-colors ${
                 tab === key
-                  ? "bg-panel2 text-white"
-                  : "text-muted hover:text-white"
+                  ? "bg-panel2 text-accent"
+                  : "text-muted hover:text-accent"
               }`}
             >
               {label}
