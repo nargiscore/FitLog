@@ -21,7 +21,7 @@ export default function DetailActions({ workout }) {
       </button>
       <button
         onClick={() => addToSaved(workout)}
-        className="flex items-center gap-2 rounded-full border border-line px-5 py-2.5 text-sm font-semibold text-accenttransition-colors hover:border-accent/60"
+        className="flex items-center gap-2 rounded-full border border-line px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:border-accent/60"
       >
         <Bookmark className="h-4 w-4" />
         Save for later

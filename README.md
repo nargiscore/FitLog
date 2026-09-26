@@ -1,4 +1,4 @@
-# 💪 FitLog — Workout Library
+# FitLog — Workout Library
 
 A dark, no-nonsense gym companion built with Next.js. Browse a library of
 twelve lifts, open detailed instructions for each, and build out today's

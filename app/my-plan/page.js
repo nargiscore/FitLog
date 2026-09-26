@@ -24,13 +24,29 @@ export default function MyPlanPage() {
     return [...rawList].sort((a, b) => a[key] - b[key]);
   }, [rawList, sortBy]);
 
+  // const metrics = useMemo(() => {
+  //   return {
+  //     exercises: plan.length,
+  //     minutes: plan.reduce((sum, w) => sum + (w.duration || 0), 0),
+  //     calories: plan.reduce((sum, w) => sum + (w.caloriesBurned || 0), 0),
+  //   };
+  // }, [plan]);
+
   const metrics = useMemo(() => {
-    return {
-      exercises: plan.length,
-      minutes: plan.reduce((sum, w) => sum + (w.duration || 0), 0),
-      calories: plan.reduce((sum, w) => sum + (w.caloriesBurned || 0), 0),
-    };
-  }, [plan]);
+  const currentList = tab === "plan" ? plan : saved;
+
+  return {
+    exercises: currentList.length,
+    minutes: currentList.reduce(
+      (sum, w) => sum + (w.duration || 0),
+      0
+    ),
+    calories: currentList.reduce(
+      (sum, w) => sum + (w.caloriesBurned || 0),
+      0
+    ),
+  };
+}, [plan, saved, tab]);
 
   return (
     <section className="mx-auto max-w-4xl px-5 py-12">
